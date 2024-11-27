@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu Roulette Russe</title>
+  <style>
+    /* Ajoutez vos styles ici */
+  </style>
+</head>
+<body>
+
+<h1>Roulette Russe</h1>
+<div id="message">Bienvenue dans le jeu !</div>
+<button id="passGunButton">Passer le Pistolet</button>
+<button id="fireButton">Tirer</button>
+
+<script>
+  const socket = new WebSocket('ws://localhost:8080');  // Se connecter au serveur WebSocket
+
+  // Lorsque le socket est ouvert, afficher un message
+  socket.onopen = function () {
+    console.log('Connecté au serveur');
+  };
+
+  // Recevoir un message du serveur
+  socket.onmessage = function (event) {
+    document.getElementById('message').innerText = event.data;
+  };
+
+  // Quand le bouton "Passer le Pistolet" est cliqué
+  document.getElementById('passGunButton').onclick = function () {
+    socket.send('passGun');
+  };
+
+  // Quand le bouton "Tirer" est cliqué
+  document.getElementById('fireButton').onclick = function () {
+    socket.send('fire');
+  };
+</script>
+
+</body>
+</html>

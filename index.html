@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Russe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="txt_container">
+        <p id="message" class="message">Cliquez sur un bouton pour commencer le jeu.</p>
+        </div>
+    <div class="container">
+        <div>
+            <button class="fire-btn" onclick="playerFire()">Se viser</button>
+            <button class="pass-btn" onclick="passGun()">Viser le rival</button>
+        </div>
+        <div class="txtanim2">
+            <p>Score Joueur : <span id="playerScore">0</span></p>
+        </div>
+    </div>
+    <!-- Lien vers le fichier JS -->
+    <script src="roulette-russe.js"></script>
+    <div id="imageContainer"></div>
+    <div class="description_container">
+        <p class="description">Règles : <br><br>
+            &nbsp&nbspAu début du jeu, on place une balle dans un<br>
+            &nbsp&nbspemplacement aléatoire d'un barillet de revolver.<br><br>
+            &nbsp- Si vous vous visez vous-même, mais qu'il<br>
+            &nbsp&nbsp&nbsp&nbspn'y a pas de balle, vous pouvez rejouer.<br><br>
+            &nbsp- Si vous visez l'adversaire, mais qu'il n'y a pas<br>
+            &nbsp&nbsp&nbsp&nbspde balle, vous devez lui donner le pistolet.<br><br>
+            &nbsp- Si vous visez l'adversaire et qu'il y a une balle,<br>
+            &nbsp&nbsp&nbsp&nbspvous gagnez des points.<br><br>
+            &nbsp- Vous perdez si vous êtes touché par une balle.<br>
+            </p>
+            
+    </div>
+    <a href="accueil.html">
+        <button class="accueil-button">Accueil</button>
+    </a>
+    <a href="https://github.com/gurokothecat">
+        <button class="github-button">GitHub</button>
+    </a>
+    <a href="credits.html">
+        <button class="credits-button">Credits</button>
+    </a>
+
+    <audio id="music" autoplay loop hidden>
+        <source src="The Animals - House Of The Rising Sun (Music Video) [4K HD].mp3" type="audio/mp3">
+        Votre navigateur ne prend pas en charge l'élément audio.
+      </audio>
+      
+      <label for="volumeControl" class="volume">Volume :</label>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" oninput="changeVolume()" class="volumec">
+      
+      
+</body>
+</html>

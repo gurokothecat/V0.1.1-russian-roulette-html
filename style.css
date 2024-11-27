@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url(6666cc614ec73542d9e9dfa272b6cda0.gif);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #ecf0f1;
+}
+.container {
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fire-btn {
+    position: absolute;
+    background-color: #ff0000;
+    color: white;
+    bottom: 20%;
+    left: 35%;
+    width: 13%;
+    height: 13%;
+    
+    /* Statique par défaut */
+    background-size: cover; /* Ajuste pour couvrir entièrement */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat;
+    background-image: url('360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg'); /* Image initiale */
+    transition: background-image 0.3s ease; /* Transition douce pour revenir à l'image initiale */
+}
+
+.fire-btn:hover {
+    /* Animation au survol */
+    animation: backgroundAnimation 1s linear infinite;
+}
+
+
+.pass-btn {
+    position: absolute;
+    background-color: #3498db;
+    color: white;
+    bottom: 20%;
+    right: 35%;
+    width: 13%;
+    height: 13%;
+    
+    /* Statique par défaut */
+    background-size: cover; /* Ajuste pour couvrir entièrement */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat;
+    background-image: url('blue_still1-fr-1713295206.jpg'); /* Image initiale */
+    transition: background-image 0.3s ease; /* Transition douce pour revenir à l'image initiale */
+}
+
+.pass-btn:hover {
+    /* Animation au survol */
+    animation: backgroundAnimation 1s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('images.jpg');
+    }
+    15% {
+        background-image: url('images\ \(1\).jpg');
+    }
+    30% {
+        background-image: url('images\ \(2\).jpg');
+    }
+    45% {
+        background-image: url('images\ \(3\).jpg');
+    }
+    60% {
+        background-image: url('images\ \(4\).jpg');
+    }
+    75% {
+        background-image: url('images\ \(5\).jpg');
+    }
+    90% {
+        background-image: url('images\ \(6\).jpg'); /* Boucle */
+    }
+    100% {
+        background-image: url('images\ \(5\).jpg');
+    }
+}
+
+.scoreboard {
+    margin-top: 20px;
+}
+
+.txtanim {
+    font-size: 3rem;
+    text-align: center;
+    animation: changerPolice 1s infinite;
+    text-shadow: 0 0 10px red, 0 0 20px crimson, 0 0 30px darkred;
+    transition: all 0.5s ease-in-out;
+}
+
+.txtanim2 {
+    position: absolute;
+    left: 44%;
+    bottom: 33%;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Impact, 'fantasy';
+    text-shadow: 0 0 10px red, 0 0 20px crimson, 0 0 30px darkred;
+    transition: all 0.5s ease-in-out;
+}
+
+.message {
+    z-index: 6;
+    color: white;
+    font-family: Courier New, monospace;
+    font-size: 2rem;
+}
+
+    #imageContainer {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 41.5%;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+    #imageContainer img {
+        max-width: 120%;
+        max-height: 120%;
+    }
+
+.txt_container{
+    display: inline-block;
+    border: 2px solid #333;
+    background-color: #121212;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+.description_container{
+    position: absolute;
+    display: inline-block;
+    border: 2px solid #333;
+    background-color: #121212;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+    border-radius: 5px;
+    min-height: 50px;
+    left: 70%;
+    top: 18%;
+    max-width: 25%;
+}
+
+.description{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+}
+
+.github-button {
+    position: absolute;
+    top: 80%;
+    left: 46%;
+    background-color: #333; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsque l'on survole le bouton */
+    text-decoration: none; /* Supprime le soulignement du texte */
+    font-size: 16px; /* Taille de la police */
+    width: 7%;
+    height: 7%;
+}
+
+.github-button:hover {
+    background-color: #6e5494; /* Couleur de fond au survol */
+}
+
+.accueil-button {
+    position: absolute;
+    top: 80%;
+    left: 37%;
+    background-color: #333; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsque l'on survole le bouton */
+    text-decoration: none; /* Supprime le soulignement du texte */
+    font-size: 16px; /* Taille de la police */
+    width: 7%;
+    height: 7%;
+}
+
+.accueil-button:hover {
+    background-color: #6e5494; /* Couleur de fond au survol */
+}
+
+.credits-button {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    background-color: #333; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsque l'on survole le bouton */
+    text-decoration: none; /* Supprime le soulignement du texte */
+    font-size: 16px; /* Taille de la police */
+    width: 7%;
+    height: 7%;
+}
+
+.credits-button:hover {
+    background-color: #6e5494; /* Couleur de fond au survol */
+}
+
+#logoContainer {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 41.5%;
+    width: 300px;
+    height: 43%;
+    left: 0.8%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10%;
+}
+
+#logoContainer img {
+    max-width: 185%;
+    max-height: 180%;
+}
+
+.volume{
+    z-index: 6;
+    position: fixed;
+    left: 42.5%;
+    top: 14.75%;
+    font-family: serif;
+    font-size: 1.2em;
+}
+
+.volumec{
+    z-index: 6;
+    position: fixed;
+    transform: translateX(-50%);
+    top: 15%;
+}
